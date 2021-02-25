@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;0,800;1,800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+}
+
+/* CARDS */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 15vw auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.card p {
+  padding: 3vw;
+}
+.card button {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1% 2%;
+  font-weight: bold;
+  margin: 3%;
+}
+.card img {
+  max-width: 100%;
+  max-height: 50%;
+}
+.card .header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 2%;
+}
+.card .header h1 {
+  font-size: 5em;
+  font-weight: 900;
+  font-size: 2em;
+  margin: 2%;
+}
+.card .header h2 {
+  border-radius: 5%;
+  padding: 2%;
+}
+
+/* Card light mode */
+.light-mode.card {
+  background-color: #f8f8f8;
+  color: #141414;
+}
+.light-mode.card button {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+.light-mode.card h2 {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+.light-mode.card h1 {
+  color: #a52e02;
+}
+
+/* Card dark mode */
+.dark-mode.card {
+  background-color: #141414;
+  color: white;
+}
+.dark-mode.card h1 {
+  color: #e7b996;
+}
+.dark-mode.card h2 {
+  color: white;
+  border: 2px solid white;
+}
+.dark-mode.card button {
+  color: #e7b996;
+  border: 2px solid #e7b996;
+}
+
+.social-button {
+  display: flex;
+  flex-direction: row;
+  margin: 2vw;
+}
+
+.effect {
+  display: flex;
+}
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: #e7b996;
+  border: 2px solid #e7b996;
+}
+
+.light-mode .effect a {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a:last-child {
+  margin-right: 0px;
+}
+.effect a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.effect a i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.effect.varrius a {
+  transition: all 0.2s linear 0s;
+}
+.effect.varrius a:after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  top: -110%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  background-color: #e7b996;
+  border-radius: 50%;
+}
+
+.light-mode .effect.varrius a:after {
+  background-color: #e7b996;
+}
+
+.effect.varrius a:hover {
+  color: #fff;
+}
+.effect.varrius a:hover:after {
+  top: 5%;
+  transition: all 0.2s linear 0s;
+}
+
+.clear {
+  clear: both;
+}
+
+.slide-toggle {
+  display: none;
+}
+
+.slidemenu {
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.slidemenu label {
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+}
+.slidemenu label:hover {
+  cursor: pointer;
+  color: #666;
+}
+.slidemenu label span {
+  display: block;
+  padding: 10px;
+}
+.slidemenu label .icon {
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style */
+.slider {
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.slider .bar {
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations */
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle */
+.slidemenu .slide-toggle:checked + label {
+  opacity: 1;
+}
+.slidemenu #slide-item-1:checked ~ .slider .bar {
+  margin-left: 0;
+}
+.slidemenu #slide-item-2:checked ~ .slider .bar {
+  margin-left: 25%;
+}
+.slidemenu #slide-item-3:checked ~ .slider .bar {
+  margin-left: 50%;
+}
+.slidemenu #slide-item-4:checked ~ .slider .bar {
+  margin-left: 75%;
+}
+
+/* CARDS */
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 15vw auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.blogCard p {
+  padding: 3vw;
+}
+.blogCard button {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1% 2%;
+  font-weight: bold;
+  margin: 3%;
+}
+.blogCard img {
+  max-width: 100%;
+  max-height: 50%;
+}
+.blogCard .header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 2%;
+}
+.blogCard .header h1 {
+  font-size: 5em;
+  font-weight: 900;
+  font-size: 2em;
+  margin: 2%;
+}
+.blogCard .header h2 {
+  border-radius: 5%;
+  padding: 2%;
+}
+
+/* Card light mode */
+.light-mode.card {
+  background-color: #f8f8f8;
+  color: #141414;
+}
+.light-mode.card button {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+.light-mode.card h2 {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+.light-mode.card h1 {
+  color: #a52e02;
+}
+
+/* Card dark mode */
+.dark-mode.card {
+  background-color: #141414;
+  color: white;
+}
+.dark-mode.card h1 {
+  color: #e7b996;
+}
+.dark-mode.card h2 {
+  color: white;
+  border: 2px solid white;
+}
+.dark-mode.card button {
+  color: #e7b996;
+  border: 2px solid #e7b996;
+}
+
+.social-button {
+  display: flex;
+  flex-direction: row;
+  margin: 2vw;
+}
+
+.effect {
+  display: flex;
+}
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: #e7b996;
+  border: 2px solid #e7b996;
+}
+
+.light-mode .effect a {
+  color: #a52e02;
+  border: 2px solid #a52e02;
+}
+
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a:last-child {
+  margin-right: 0px;
+}
+.effect a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.effect a i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.effect.varrius a {
+  transition: all 0.2s linear 0s;
+}
+.effect.varrius a:after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  top: -110%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  background-color: #e7b996;
+  border-radius: 50%;
+}
+
+.light-mode .effect.varrius a:after {
+  background-color: #e7b996;
+}
+
+.effect.varrius a:hover {
+  color: #fff;
+}
+.effect.varrius a:hover:after {
+  top: 5%;
+  transition: all 0.2s linear 0s;
+}
+
+.ctaContributor {
+  background-color: black;
+  padding: 3em;
+}
+.ctaContributor .ctaTitle {
+  color: white;
+}
+
+.ctaButton a {
+  color: white;
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+}
+.ctaButton a .text {
+  transform: translate3d(0, 0.7em, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.ctaButton a:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: calc(0.7em * 1.2);
+  right: calc(0.7em * 1.2);
+  height: 3px;
+  background: #e7b996;
+  transition-transform: 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+  transition-right: 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transition-left: 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+.ctaButton .line {
+  position: absolute;
+  background: #e7b996;
+}
+.ctaButton .line.-right, .ctaButton .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+.ctaButton .line.-top, .ctaButton .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+.ctaButton .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+.ctaButton .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+.ctaButton .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+.ctaButton .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+}
+.ctaButton a:hover .text,
+.ctaButton a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.ctaButton a:hover:after,
+.ctaButton a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition-transform: 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  transition-right: 0.2s cubic-bezier(1, 0, 0.65, 1.01);
+  transition-left: 0s 0.3s;
+}
+.ctaButton a:hover .line,
+.ctaButton a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+.ctaButton a:hover .line.-right,
+.ctaButton a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+.ctaButton a:hover .line.-top,
+.ctaButton a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+.ctaButton a:hover .line.-left,
+.ctaButton a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+.ctaButton a:hover .line.-bottom,
+.ctaButton a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -4,31 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
 
 </head>
 <body>
-    <h1> fdeazf azefzea zazeaffaz  azf</h1>
-
-    <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quas, reprehenderit consectetur ipsam earum consequuntur eveniet, est deserunt ullam beatae dignissimos voluptates, explicabo sit debitis officiis temporibus blanditiis aliquid sint. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores eius aperiam neque quae id excepturi nesciunt, quibusdam eaque amet esse fugit ex autem aut architecto dolore eos distinctio rerum! </p>
-
-    <div class="test">
+    <!-- Navigation -->
+    <nav class="slidemenu">
+  
+        <!-- Item 1 -->
+        <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked/>
+        <label for="slide-item-1"><p class="icon">💎</p><span>Home</span></label>
         
-    </div>
+        <!-- Item 2 -->
+        <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+        <label for="slide-item-2"><p class="icon">★</p><span>About</span></label>
+        
+        <!-- Item 3 -->
+        <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+        <label for="slide-item-3"><p class="icon">👥</p><span>Contributeurs</span></label>
+        
+        <!-- Item 4 -->
+        <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+        <label for="slide-item-4"><p class="icon">✎</p><span>Blog</span></label>
+        
+        <div class="clear"></div>
+        
+        <!-- Bar -->
+        <div class="slider">
+          <div class="bar"></div>
+        </div>
+        
+      </nav>
+    
 
-    <div class="light-mode wow">
+    <div class="light-mode blogCard">
         <img src="1MAPLTII55FJ1570819145531.jpg" alt="">
-        <h1>wow</h1>
+        <div class="card-header">
+            <h2>Etiquette</h2>
+            
+        </div>
+        <h1>Je suis un titre d'article</h1>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quisquam. Recusandae nam quam dolorem nostrum ex architecto fugiat rerum, fugit vero voluptas at cupiditate repellendus delectus corrupti quasi dolore alias! </p>
-        <button>Cool</button>
+        
+        <button>Voir l'article</button>
 
     </div>
 
-    <div class="dark-mode wow">
+    <div class="dark-mode card">
+        <img src="../wow.jpg" alt="">
+        <div class="header">
+            <h1>John Doe</h1>
+            <h2>Osteopathe</h2>
+        </div>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quisquam. Recusandae nam quam dolorem nostrum ex architecto fugiat rerum, fugit vero voluptas at cupiditate repellendus delectus corrupti quasi dolore alias! </p>
+
+        <div class="effect varrius">
+            <div class="social-button">
+                <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="in" title="Join us on Linked In"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <button class=".effect"> <a>Voir tous les articles</a></button>
+    </div>
+
+    <div class="light-mode card">
         <img src="wow.jpg" alt="">
-        <div class="title">
+        <div class="header">
             <h1>John Doe</h1>
             <h2>Osteopathe</h2>
         </div>
@@ -43,9 +88,24 @@
             </div>
         </div>
         <button>Voir tous les articles</button>
-
     </div>
 
+
+    <section class="ctaContributor">
+        <h1 class="ctaTitle">Envie de rejoindre l'aventure?</h1>
+        <div class="ctaButton">
+            <a>
+              <span class="text"> Devenir contributeur</span>
+              <span class="line -right"></span>
+              <span class="line -top"></span>
+              <span class="line -left"></span>
+              <span class="line -bottom"></span>
+            </a>
+        </div>
+    </section>
+  
+
+      
     <script src="https://use.fontawesome.com/313ce0e1e1.js"></script>
 
 </body>
