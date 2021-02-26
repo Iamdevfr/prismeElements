@@ -1,0 +1,79 @@
+$myColor : rgba(0, 128, 172, 1)
+
+// General post style
+.contentWrapper
+  display: flex
+  flex-direction: column
+
+
+  p
+    padding: 2%
+    margin: 5%
+    font-size: 2vw
+
+  h1
+    font-size: 5vw
+    padding: 2%
+    color: $myColor
+
+// "Hero section"  
+.heroWrapper
+  width: 100vw
+  height: 100vh
+  position: relative
+  background-color: red
+  display: flex
+  justify-content: center
+  background-image: url('../../wow.jpg')
+  object-fit: contain
+
+  .heroTitle
+    z-index: 99
+    position: absolute
+    font-size: 5vw
+    color: white
+    bottom: 5%
+    left: 5%
+    width: 50%
+
+  .etiqueteBox
+    position: absolute
+    font-size: 2vw
+    color: white
+    bottom: 5%
+    right: 5%
+    display: flex
+    flex-direction: row
+
+  & h2
+      border: 0.3vw solid white
+      border-radius: 5px
+      margin: 2%
+      padding: 2%
+
+// Incipit box
+
+.incipitBox
+  border-radius: 5px
+  margin : 2%
+  background-color: $myColor
+  color: white
+  font-size: 1.5em
+
+
+
+
+
+
+
+
+
+//   color:  linear-gradient(to right, #fddd10, #ff6c2c, #e5e, #2fabe1)
+//   animation: gradientBackground 10s alternate ease-in-out
+//   animation-iteration-count: infinite
+
+// @keyframes gradientBackground
+//   0%
+//     background-position: left
+//   100%
+//     background-position: right
