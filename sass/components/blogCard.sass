@@ -11,19 +11,33 @@ $bg-light: rgb(248, 248, 248)
   flex-direction: column
   justify-content: center
   align-items: center
-  width: 60%
+  width: 350px
   margin: 15vw auto
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  position: relative
 
+  .img
+    height: 50%
+  
+  .content
+    height: 50%
+    
   p
-    padding: 3vw
+    padding: 1em
 
   button
-    background-color: transparent
-    border-radius: 5px
-    padding: 1% 2%
-    font-weight: bold
-    margin: 3%
+    width: 40px
+    height: 40px
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4)
+    z-index: 99
+    background-color: $accent-light
+    color: white
+    position: absolute
+    right: 2%
+    bottom: 48%
 
   img
     max-width: 100%
@@ -33,18 +47,26 @@ $bg-light: rgb(248, 248, 248)
     display: flex
     width: 100%
     justify-content: space-around
-    margin: 2%
-
-    h1
-        font-size: 5em
-        font-weight: 900
-        font-size: 2em
-        margin: 2%
+    align-items: center
 
     h2
         border-radius: 5%
         padding: 2%
+        height: 100%
+        color: $accent-light
+        border: 2px solid $accent-light
 
+  .content
+    display: flex
+    flex-direction: column
+    align-items: center
+  
+    h1
+        font-weight: 900
+        font-size: 1.5em
+        color: $accent-light
+        margin-top: 0.5em
+        
 /* Card light mode
 
 .light-mode.card
@@ -78,78 +100,3 @@ $bg-light: rgb(248, 248, 248)
     button
         color: $accent-dark
         border: 2px solid $accent-dark   
-
-
-// social button
-
-.social-button
-  display: flex
-  flex-direction: row
-  margin: 2vw
-
-.effect
-  display: flex
-
-  a
-    text-decoration: none !important
-    width: 60px
-    height: 60px
-    display: flex
-    align-items: center
-    justify-content: center
-    border-radius: 50%
-    margin-right: 20px
-    font-size: 25px
-    overflow: hidden
-    position: relative
-    color: $accent-dark
-    border: 2px solid $accent-dark
-
-.light-mode .effect a
-  color: $accent-light
-  border: 2px solid $accent-light
-
-.effect
-  a
-    i
-      position: relative
-      z-index: 3
-
-    &:last-child
-      margin-right: 0px
-
-    &:before
-      content: ""
-      display: inline-block
-      height: 100%
-      vertical-align: middle
-
-    i
-      display: inline-block
-      vertical-align: middle
-
-  &.varrius a
-    transition: all 0.2s linear 0s
-
-    &:after
-      content: ""
-      display: block
-      width: 90%
-      height: 90%
-      top: -110%
-      left: 0
-      right: 0
-      margin: auto
-      position: absolute
-      background-color: $accent-dark
-      border-radius: 50%
-
-.light-mode .effect.varrius a:after
-  background-color: $accent-dark
-
-.effect.varrius a:hover
-  color: #fff
-
-  &:after
-    top: 5%
-    transition: all 0.2s linear 0s

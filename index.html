@@ -39,16 +39,36 @@
       </nav>
     
 
+    <button class="showMoreButton"> Voir plus</button>
+
     <div class="light-mode blogCard">
-        <img src="1MAPLTII55FJ1570819145531.jpg" alt="">
-        <div class="card-header">
-            <h2>Etiquette</h2>
-            
+        <div class="img">
+            <img src="1MAPLTII55FJ1570819145531.jpg" alt="">
         </div>
+        <div class="content">
+         
+            <div class="header">
+                <h2 class="etiquette">Osteo</h2>
+
+                <figure class="fir-image-figureForCard">
+
+                    <a class="fir-imageover" rel="noopener" target="_blank">
+                    <img class="fir-author-image fir-clickcircleForCard" src="https://fir-rollup.firebaseapp.com/de-sm.jpg" alt="David East - Author">
+                    </a>
+                
+                    <figcaption>
+                    <div class="fig-author-figure-title">John Doe</div>
+                    <div class="fig-author-figure-title Job">Osteopathe</div>
+                    <div class="fig-author-figure-title">16 janvier 2021</div>
+                    </figcaption>
+                </figure>
+            </div>
         <h1>Je suis un titre d'article</h1>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quisquam. Recusandae nam quam dolorem nostrum ex architecto fugiat rerum, fugit vero voluptas at cupiditate repellendus delectus corrupti quasi dolore alias! </p>
+   
+        </div>
+        <button class="fa fa-plus"></button>
         
-        <button>Voir l'article</button>
 
     </div>
 
@@ -90,23 +110,37 @@
         <button> <a href="post.html">Voir tous les articles</a> </button>
     </div>
 
-
-    <section class="ctaContributor">
-        <h1 class="ctaTitle">Envie de rejoindre l'aventure?</h1>
-        <div class="ctaButton">
-            <a>
-              <span class="text"> Devenir contributeur</span>
-              <span class="line -right"></span>
-              <span class="line -top"></span>
-              <span class="line -left"></span>
-              <span class="line -bottom"></span>
-            </a>
-        </div>
+    <h1>Tous nos prismes:</h1>
+    <section class="etiquetteBox">
+        <span> Medecine chinoise</span>
+        <span> Medecine occidentale</span>
+        <span> Osteopathie </span>
+        <span> Psychologie freudienne</span>
+        <span> Psychologie young</span>
     </section>
-  
+
+<!-- Need ctaContributorScript function on script.js    -->
+    <section class="ctaContributor">
+        <h2> Interessé pour devenir un de nos contributeurs? <br> Laissez nous votre email et nous vous recontacterons!  </h2>
+        <p> <br>liste avantages devenir contributeur..  </p>
+        <button>Devenir contributeur!</button>
+
+        <h2>Ou contactez nous par mail à cette adresse: prismeContact@gmail.com</h2>
+        <!-- <div class="container">
+            <form id="singular-form">
+                <button class="shown" type="button" id="trigger">Devenir contributeur</button>
+                <div id="input-container">
+                    <input type="text" placeholder="E-mail">
+                    <button type="button">Envoyer</button>
+                </div>
+                <div id="success">Merci!</div>
+            </form>    
+        </div> -->
+    </section>
+    
 
       
     <script src="https://use.fontawesome.com/313ce0e1e1.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

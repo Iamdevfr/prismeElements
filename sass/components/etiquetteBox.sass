@@ -1,0 +1,32 @@
+.etiquetteBox
+  display: inline
+
+  span
+    font-family: montserrat
+    font-weight: 900
+    font-size: 3vw
+    margin-left: 0.5em
+    color: transparent
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-stroke: 1px red
+
+    &:hover
+      background-color: red
+      -webkit-text-stroke: 0px
+
+    &:nth-child(1)
+      -webkit-text-stroke: 2px blue
+
+    &:nth-child(1):hover
+      background-color: blue
+      -webkit-text-stroke: 0px
+      
+    &:nth-child(2)
+      -webkit-text-stroke: 2px green
+
+    &:nth-child(2):hover
+      background-color: green
+      -webkit-text-stroke: 0px
+      
+      
