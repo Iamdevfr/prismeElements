@@ -20,7 +20,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .card p {
-  padding: 3vw;
+  padding: 1vw;
 }
 .card button {
   background-color: transparent;
@@ -120,6 +120,8 @@
 .effect a i {
   position: relative;
   z-index: 3;
+  display: inline-block;
+  vertical-align: middle;
 }
 .effect a:last-child {
   margin-right: 0px;
@@ -128,10 +130,6 @@
   content: "";
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
-}
-.effect a i {
-  display: inline-block;
   vertical-align: middle;
 }
 .effect.varrius a {
@@ -290,11 +288,9 @@
   align-items: center;
 }
 .blogCard .header h2 {
-  border-radius: 5%;
   padding: 2%;
   height: 100%;
   color: #a52e02;
-  border: 2px solid #a52e02;
 }
 .blogCard .content {
   display: flex;
@@ -527,19 +523,111 @@ button {
   display: flex;
 }
 
+.testTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animTitle {
+  from {
+    background: linear-gradient(#F39B6D 0 0) left/var(--d, 0%) 100% no-repeat;
+  }
+  to {
+    background: linear-gradient(#F39B6D 0 0) left/var(--d, 100%) 100% no-repeat;
+    color: white;
+  }
+}
+.titleH1 {
+  animation: animTitle 1s ease-in-out both;
+  justify-content: center;
+  padding: 0 1vw;
+}
+.titleH1.test2 {
+  background: linear-gradient(#EF3E36 0 0) left/var(--d, 0%) 100% no-repeat;
+}
+.titleH1.test3 {
+  background: linear-gradient(#17BEBB 0 0) left/var(--d, 0%) 100% no-repeat;
+}
+.titleH1.test4 {
+  background: linear-gradient(#3E6990 0 0) left/var(--d, 0%) 100% no-repeat;
+}
+.titleH1.test5 {
+  background: linear-gradient(#5D576B 0 0) left/var(--d, 0%) 100% no-repeat;
+}
+
+.etiquette {
+  background: linear-gradient(currentColor 0 0) 100% 0, linear-gradient(currentColor 0 0) 0 0, linear-gradient(currentColor 0 0) 0 100%, linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  animation: animEtiquette 1s ease-in-out both;
+  padding: 1vw;
+  margin-bottom: 1vh;
+}
+.etiquette:hover {
+  --d: 100%;
+}
+.etiquette.test2 {
+  color: red;
+}
+.etiquette.test3 {
+  color: #5D576B;
+}
+.etiquette.test4 {
+  color: #3E6990;
+}
+.etiquette.test5 {
+  color: #F39B6D;
+}
+
+@keyframes animEtiquette {
+  from {
+    background-size: var(--d, 0) 5px, 5px var(--d, 0);
+  }
+  to {
+    background-size: var(--d, 100%) 5px, 5px var(--d, 100%);
+  }
+}
+.hyperlink {
+  background: radial-gradient(farthest-side at bottom, red 98%, transparent) bottom/calc(2*var(--d, 7px)) var(--d, 0) no-repeat, linear-gradient(red 0 0) bottom/100% 3px no-repeat;
+  transition: 0.5s;
+}
+.hyperlink.test2 {
+  background: radial-gradient(farthest-side at bottom, green 98%, transparent) bottom/calc(2*var(--d, 7px)) var(--d, 0) no-repeat, linear-gradient(green 0 0) bottom/100% 3px no-repeat;
+}
+
+.hyperlink:hover {
+  --d: 150%;
+  color: #fff;
+  cursor: pointer;
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.contentWrapper .postContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 .contentWrapper p {
-  padding: 2%;
-  margin: 5%;
-  font-size: 2vw;
+  font-size: 1.2em;
+  margin: 2vh 2vh;
 }
-.contentWrapper h1 {
-  font-size: 5vw;
-  padding: 2%;
-  color: #0080ac;
+.contentWrapper .titleH2 {
+  font-weight: 900;
+  font-size: 2em;
+  color: #F39B6D;
+  margin-left: 2%;
+}
+.contentWrapper .incipitBox p {
+  font-weight: 700;
 }
 
 .heroWrapper {
@@ -548,17 +636,22 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url("../../wow.jpg");
-  object-fit: cover;
+}
+.heroWrapper img {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  width: 50%;
+  height: 70%;
 }
 .heroWrapper .heroTitle {
   z-index: 99;
   position: absolute;
   font-size: 5vw;
-  color: white;
   bottom: 5%;
   left: 5%;
   width: 50%;
+  color: #d6d5d5;
 }
 .heroWrapper .etiqueteBox {
   position: absolute;
@@ -569,18 +662,12 @@ button {
   display: flex;
   flex-direction: row;
 }
-.heroWrapper h2 {
-  border: 0.3vw solid white;
-  border-radius: 5px;
-  margin: 2%;
-  padding: 2%;
+.heroWrapper .etiqueteBox .heroEtiquette {
+  color: #F39B6D;
 }
 
 .incipitBox {
   border-radius: 5px;
-  margin: 2%;
-  background-color: #0080ac;
-  color: white;
   font-size: 1.5em;
 }
 
@@ -597,13 +684,6 @@ button {
   height: 100%;
   /*BLUE BG */
   background: radial-gradient(ellipse at center, #1babdb 0%, #0080ac 70%, rgba(0, 128, 172, 0) 70.3%);
-  /*RED BG
-  * *background: radial-gradient(
-  * *  ellipse at center,
-  * *  rgba(210, 20, 20, 1) 0%,
-  * *  rgba(210, 20, 20, 1) 70%,
-  * *  rgba(210, 20, 20, 0) 70.3%
-  * *); */
   position: relative;
   margin: 0;
   color: white;

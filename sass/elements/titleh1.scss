@@ -1,0 +1,50 @@
+.testTitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes animTitle{
+  from{
+    background:
+    linear-gradient(#F39B6D 0 0) 
+    left /var(--d, 0%) 100% no-repeat;
+  }
+  to{
+    background:
+    linear-gradient(#F39B6D 0 0) 
+    left /var(--d, 100%) 100% no-repeat;
+    color:white;
+  }
+}
+.titleH1 {
+  
+  animation: animTitle 1s ease-in-out both;
+  justify-content: center;
+  padding: 0 1vw;
+
+  // &:hover {
+  //   --d: 100%;
+  //   color: #fff;
+  // }
+
+  &.test2{
+    background:     linear-gradient(#EF3E36 0 0)
+    left /var(--d, 0%) 100% no-repeat;
+  }
+
+  &.test3{
+    background:     linear-gradient(#17BEBB 0 0)
+    left /var(--d, 0%) 100% no-repeat;
+  }
+
+  &.test4{
+    background:     linear-gradient(#3E6990 0 0)
+    left /var(--d, 0%) 100% no-repeat;
+  }
+
+  &.test5{
+    background:     linear-gradient(#5D576B 0 0)
+    left /var(--d, 0%) 100% no-repeat;
+  }
+}

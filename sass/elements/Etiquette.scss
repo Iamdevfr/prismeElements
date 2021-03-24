@@ -1,0 +1,39 @@
+.etiquette {
+  background:
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  animation: animEtiquette 1s ease-in-out both;
+  padding: 1vw;
+  margin-bottom: 1vh;
+
+  &:hover{
+    --d: 100%;
+  }
+
+  &.test2{
+    color:red;
+  }
+  &.test3{
+    color:#5D576B;
+  }
+  &.test4{
+    color:#3E6990;
+  }
+  &.test5{
+    color:#F39B6D;
+  }
+}
+
+@keyframes animEtiquette{
+  from{
+    background-size: var(--d, 0) 5px, 5px var(--d, 0);
+
+  }
+  to{
+    background-size: var(--d, 100%) 5px, 5px var(--d, 100%);
+  }
+}

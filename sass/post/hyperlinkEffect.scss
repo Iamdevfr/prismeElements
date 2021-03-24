@@ -1,0 +1,18 @@
+.hyperlink {
+  background:
+    radial-gradient(farthest-side at bottom, red 98%, transparent) bottom/calc(2*var(--d, 7px)) var(--d, 0) no-repeat,
+    linear-gradient(red 0 0) bottom /100% 3px no-repeat;
+  transition: 0.5s;
+  &.test2{
+    background:
+    radial-gradient(farthest-side at bottom, green 98%, transparent) bottom/calc(2*var(--d, 7px)) var(--d, 0) no-repeat,
+    linear-gradient(green 0 0) bottom /100% 3px no-repeat;
+  }
+}
+.hyperlink:hover {
+  --d: 150%;
+  color: #fff;
+  cursor: pointer;
+
+
+}
